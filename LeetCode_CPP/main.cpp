@@ -4,17 +4,18 @@
 #include <math.h>
 #include "ListNode.h"
 
-#include "Leetcode0020.h"
+#include "Leetcode0069.h"
 using namespace std;
 
 int main() {
-    vector<string> test;
+    vector<int> test;
 
-    test.push_back("flower");
-    test.push_back("flow");
-    test.push_back("flight");
+    test.push_back(-2);
+    test.push_back(3);
+    test.push_back(1);//-2,1,-3,4,-1,2,1,-5,4
+    test.push_back(2);
 
-    auto res = Leetcode0020::isValid("([)]");
+    auto res = Leetcode0069::mySqrt(2147395600);
 
     cout << res;
 
