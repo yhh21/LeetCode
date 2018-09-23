@@ -145,7 +145,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Leetcode0012.h" />
     <ClInclude Include="Leetcode0014.h" />
+    <ClInclude Include="Leetcode0015.h" />
+    <ClInclude Include="Leetcode0016.h" />
     <ClInclude Include="Leetcode0020.h" />
     <ClInclude Include="Leetcode0021.h" />
     <ClInclude Include="Leetcode0026.h" />
@@ -159,6 +162,9 @@
     <ClInclude Include="Leetcode0067.h" />
     <ClInclude Include="Leetcode0069.h" />
     <ClInclude Include="Leetcode0101.h" />
+    <ClInclude Include="Leetcode0160.h" />
+    <ClInclude Include="Leetcode0172.h" />
+    <ClInclude Include="Leetcode0189.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>

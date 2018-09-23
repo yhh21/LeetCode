@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <math.h>
+#include <cmath>
 #include "ListNode.h"
 
 #include "Leetcode0069.h"

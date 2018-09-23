@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include <math.h>
+#include <cmath>
 using namespace std;
 
 class Leetcode0038

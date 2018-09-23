@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include <math.h>
+#include <cmath>
 #include "TreeNode.h"
 using namespace std;
 
