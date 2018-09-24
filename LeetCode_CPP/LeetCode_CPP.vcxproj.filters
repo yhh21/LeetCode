@@ -86,5 +86,20 @@
     <ClInclude Include="Leetcode0016.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Leetcode0017.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode0018.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode0019.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode0022.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode0023.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

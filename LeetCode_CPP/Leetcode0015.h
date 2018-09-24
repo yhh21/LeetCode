@@ -22,17 +22,14 @@ public:
                 break;
             }
 
-            tmp = new vector<int>();
-            tmp->push_back(nums[i]);
             for (int j = i + 1, k = Length - 1; j < k;) {
                 int sum = nums[i] + nums[j] + nums[k];
                 if (sum == 0) {
+                    tmp = new vector<int>();
+                    tmp->push_back(nums[i]);
                     tmp->push_back(nums[j]);
                     tmp->push_back(nums[k]);
                     res.push_back(*tmp);
-
-                    tmp = new vector<int>();
-                    tmp->push_back(nums[i]);
                     
                     do {
                         ++j;
