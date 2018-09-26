@@ -28,7 +28,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -156,6 +156,8 @@
     <ClInclude Include="Leetcode0021.h" />
     <ClInclude Include="Leetcode0022.h" />
     <ClInclude Include="Leetcode0023.h" />
+    <ClInclude Include="Leetcode0024.h" />
+    <ClInclude Include="Leetcode0025.h" />
     <ClInclude Include="Leetcode0026.h" />
     <ClInclude Include="Leetcode0027.h" />
     <ClInclude Include="Leetcode0028.h" />

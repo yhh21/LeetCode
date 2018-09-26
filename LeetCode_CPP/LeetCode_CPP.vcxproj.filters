@@ -101,5 +101,11 @@
     <ClInclude Include="Leetcode0023.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Leetcode0024.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode0025.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
