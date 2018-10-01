@@ -22,7 +22,7 @@
     <ProjectGuid>{204F5AB1-3E9B-4E0A-A648-7976409214BE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LeetCode_CPP</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -142,44 +142,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Head.h" />
-    <ClInclude Include="L0012.h" />
-    <ClInclude Include="L0014.h" />
-    <ClInclude Include="L0015.h" />
-    <ClInclude Include="L0016.h" />
-    <ClInclude Include="L0017.h" />
-    <ClInclude Include="L0018.h" />
-    <ClInclude Include="L0019.h" />
-    <ClInclude Include="L0020.h" />
-    <ClInclude Include="L0021.h" />
-    <ClInclude Include="L0022.h" />
-    <ClInclude Include="L0023.h" />
-    <ClInclude Include="L0024.h" />
-    <ClInclude Include="L0025.h" />
-    <ClInclude Include="L0026.h" />
-    <ClInclude Include="L0027.h" />
-    <ClInclude Include="L0028.h" />
-    <ClInclude Include="L0029.h" />
-    <ClInclude Include="L0030.h" />
-    <ClInclude Include="L0031.h" />
-    <ClInclude Include="L0032.h" />
-    <ClInclude Include="L0033.h" />
-    <ClInclude Include="L0034.h" />
-    <ClInclude Include="L0035.h" />
-    <ClInclude Include="L0036.h" />
-    <ClInclude Include="L0038.h" />
-    <ClInclude Include="L0053.h" />
-    <ClInclude Include="L0058.h" />
-    <ClInclude Include="L0066.h" />
-    <ClInclude Include="L0067.h" />
-    <ClInclude Include="L0069.h" />
-    <ClInclude Include="L0101.h" />
-    <ClInclude Include="L0160.h" />
-    <ClInclude Include="L0172.h" />
-    <ClInclude Include="L0189.h" />
+    <ClInclude Include="src\Head.h" />
+    <ClInclude Include="src\L1_100\L0012.h" />
+    <ClInclude Include="src\L1_100\L0014.h" />
+    <ClInclude Include="src\L1_100\L0015.h" />
+    <ClInclude Include="src\L1_100\L0016.h" />
+    <ClInclude Include="src\L1_100\L0017.h" />
+    <ClInclude Include="src\L1_100\L0018.h" />
+    <ClInclude Include="src\L1_100\L0019.h" />
+    <ClInclude Include="src\L1_100\L0020.h" />
+    <ClInclude Include="src\L1_100\L0021.h" />
+    <ClInclude Include="src\L1_100\L0022.h" />
+    <ClInclude Include="src\L1_100\L0023.h" />
+    <ClInclude Include="src\L1_100\L0024.h" />
+    <ClInclude Include="src\L1_100\L0025.h" />
+    <ClInclude Include="src\L1_100\L0026.h" />
+    <ClInclude Include="src\L1_100\L0027.h" />
+    <ClInclude Include="src\L1_100\L0028.h" />
+    <ClInclude Include="src\L1_100\L0029.h" />
+    <ClInclude Include="src\L1_100\L0030.h" />
+    <ClInclude Include="src\L1_100\L0031.h" />
+    <ClInclude Include="src\L1_100\L0032.h" />
+    <ClInclude Include="src\L1_100\L0033.h" />
+    <ClInclude Include="src\L1_100\L0034.h" />
+    <ClInclude Include="src\L1_100\L0035.h" />
+    <ClInclude Include="src\L1_100\L0036.h" />
+    <ClInclude Include="src\L1_100\L0037.h" />
+    <ClInclude Include="src\L1_100\L0038.h" />
+    <ClInclude Include="src\L1_100\L0039.h" />
+    <ClInclude Include="src\L1_100\L0040.h" />
+    <ClInclude Include="src\L1_100\L0053.h" />
+    <ClInclude Include="src\L1_100\L0058.h" />
+    <ClInclude Include="src\L1_100\L0066.h" />
+    <ClInclude Include="src\L1_100\L0067.h" />
+    <ClInclude Include="src\L1_100\L0069.h" />
+    <ClInclude Include="src\L101_200\L0101.h" />
+    <ClInclude Include="src\L101_200\L0160.h" />
+    <ClInclude Include="src\L101_200\L0172.h" />
+    <ClInclude Include="src\L101_200\L0189.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
