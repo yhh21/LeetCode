@@ -174,6 +174,8 @@
     <ClInclude Include="src\L1_100\L0038.h" />
     <ClInclude Include="src\L1_100\L0039.h" />
     <ClInclude Include="src\L1_100\L0040.h" />
+    <ClInclude Include="src\L1_100\L0041.h" />
+    <ClInclude Include="src\L1_100\L0042.h" />
     <ClInclude Include="src\L1_100\L0053.h" />
     <ClInclude Include="src\L1_100\L0058.h" />
     <ClInclude Include="src\L1_100\L0066.h" />

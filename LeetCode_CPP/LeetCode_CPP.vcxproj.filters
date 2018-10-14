@@ -136,5 +136,11 @@
     <ClInclude Include="src\L101_200\L0189.h">
       <Filter>头文件\L101-200</Filter>
     </ClInclude>
+    <ClInclude Include="src\L1_100\L0041.h">
+      <Filter>头文件\L1_100</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L1_100\L0042.h">
+      <Filter>头文件\L1_100</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
