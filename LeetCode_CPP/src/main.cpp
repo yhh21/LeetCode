@@ -1,7 +1,7 @@
-#include "L1_100/L0034.h"
+#include "L1_100/L0043.h"
 
 int main() {
-    (new L0034::Solution)->Test();
+    (new L0043::Solution)->Test();
 
     return 0;
 }

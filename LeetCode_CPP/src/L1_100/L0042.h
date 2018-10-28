@@ -8,22 +8,26 @@ namespace L0042 {
     public:
         int trap(vector<int>& height) {
             int Length = height.size();
-            int *tmps = new int[Length]();
+            if (Length < 2) return 0;
 
-            int tmp = 0;
-            for (int i = 0; i < Length; ++i) {
-                tmps[i] = tmp;
-                tmp = tmp > height[i] ? tmp : height[i];
-            }
+            int maxLeft = height[0];
+            int maxRight = height[Length - 1];
 
             int res = 0;
-            tmp = 0;
-            for (int i = Length - 1; i >= 0; --i) {
-                tmps[i] = tmp < tmps[i] ? tmp : tmps[i];
-                tmp = tmp > height[i] ? tmp : height[i];
-
-                if (tmps[i] > height[i]) {
-                    res += tmps[i] - height[i];
+            for (int i = 0, j = Length - 1; i <= j;) {
+                if (height[i] <= height[j]) {
+                    if (height[i] > maxLeft) {
+                        maxLeft = height[i];
+                    }
+                    res += maxLeft - height[i];
+                    ++i;
+                }
+                else {
+                    if (height[j] > maxRight) {
+                        maxRight = height[j];
+                    }
+                    res += maxRight - height[j];
+                    --j;
                 }
             }
 
