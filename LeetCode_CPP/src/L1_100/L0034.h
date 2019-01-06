@@ -2,32 +2,39 @@
 
 #include "../Head.h"
 
-namespace L0034 {
+namespace L0034
+{
     class Solution
     {
     public:
-        vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> searchRange(vector<int>& nums, int target)
+        {
             int Length = nums.size();
 
             int start = 0;
             int end = Length - 1;
             bool isFind = false;
 
-            for (; start <= end;) {
+            for (; start <= end;)
+            {
                 int mid = (start + end) / 2;
-                if (nums[mid] == target) {
+                if (nums[mid] == target)
+                {
                     isFind = true;
-                    for (int _end = mid; start <= _end;) {
+                    for (int _end = mid; start <= _end;)
+                    {
                         int _mid = (start + _end) / 2;
                         nums[_mid] == target ? _end = _mid - 1 : start = _mid + 1;
                     }
-                    for (int _start = mid; _start <= end;) {
+                    for (int _start = mid; _start <= end;)
+                    {
                         int _mid = (_start + end) / 2;
                         nums[_mid] == target ? _start = _mid + 1 : end = _mid - 1;
                     }
                     break;
                 }
-                else {
+                else
+                {
                     nums[mid] < target ? start = mid + 1 : end = mid - 1;
                 }
             }
@@ -38,7 +45,9 @@ namespace L0034 {
         }
 
 
-        void Test() {
+    #ifdef DEBUG
+        void Test()
+        {
             vector<int> test;
 
             test.push_back(5);
@@ -50,5 +59,6 @@ namespace L0034 {
 
             searchRange(test, 6);
         }
+    #endif /// DEBUG
     };
 }

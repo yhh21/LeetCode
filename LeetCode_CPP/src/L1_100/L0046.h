@@ -55,6 +55,7 @@ namespace L0046
             }
         }
 
+    #ifdef DEBUG
         void Test()
         {
             vector<int> test;
@@ -64,5 +65,6 @@ namespace L0046
 
             auto t = permute(test);
         }
+    #endif /// DEBUG
     };
 }

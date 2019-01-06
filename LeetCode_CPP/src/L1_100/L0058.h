@@ -2,17 +2,21 @@
 
 #include "../Head.h"
 
-namespace L0058 {
+namespace L0058
+{
     class Solution
     {
     public:
-        static int lengthOfLastWord(string s) {
+        static int lengthOfLastWord(string s)
+        {
             int Length = s.length();
             int res = 0;
             bool isFind = false;
 
-            for (int i = Length - 1; i >= 0; --i) {
-                if (s[i] != ' ') {
+            for (int i = Length - 1; i >= 0; --i)
+            {
+                if (s[i] != ' ')
+                {
                     ++res;
                     isFind = true;
                 }

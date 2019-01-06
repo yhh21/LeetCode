@@ -35,6 +35,7 @@ namespace L0048
             }
         }
 
+    #ifdef DEBUG
         void Test()
         {
             vector<vector<int>> test;
@@ -55,5 +56,6 @@ namespace L0048
 
             Print(test);
         }
+    #endif /// DEBUG
     };
 }

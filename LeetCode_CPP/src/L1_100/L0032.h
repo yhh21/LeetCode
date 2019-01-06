@@ -2,23 +2,29 @@
 
 #include "../Head.h"
 
-namespace L0032 {
+namespace L0032
+{
     class Solution
     {
     public:
-        int longestValidParentheses(string s) {
+        int longestValidParentheses(string s)
+        {
             int Length = s.length();
             if (Length == 0) return 0;
 
             int res = 0;
             int *dp = new int[Length]();
 
-            for (int i = Length - 2; i >= 0; --i) {
-                if (s[i] == '(') {
+            for (int i = Length - 2; i >= 0; --i)
+            {
+                if (s[i] == '(')
+                {
                     int j = i + 1 + dp[i + 1];
-                    if (j < Length && s[j] == ')') {
+                    if (j < Length && s[j] == ')')
+                    {
                         dp[i] = dp[i + 1] + 2;
-                        if (j + 1 < Length) {
+                        if (j + 1 < Length)
+                        {
                             dp[i] += dp[j + 1];
                         }
                     }

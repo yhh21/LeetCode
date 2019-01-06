@@ -41,6 +41,7 @@ namespace L0047
             }
         }
 
+    #ifdef DEBUG
         void Test()
         {
             vector<int> test;
@@ -50,5 +51,6 @@ namespace L0047
 
             auto t = permuteUnique(test);
         }
+    #endif /// DEBUG
     };
 }

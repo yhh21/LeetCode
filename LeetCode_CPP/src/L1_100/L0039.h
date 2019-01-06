@@ -2,14 +2,17 @@
 
 #include "../Head.h"
 
-namespace L0039 {
-    class Solution {
+namespace L0039
+{
+    class Solution
+    {
     public:
         vector<vector<int>> res;
         vector<int> comb;
         int Length;
 
-        vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> combinationSum(vector<int>& candidates, int target)
+        {
             sort(candidates.begin(), candidates.end());
             Length = candidates.size();
             BackTracking(candidates, target, 0);
@@ -17,14 +20,17 @@ namespace L0039 {
             return res;
         }
 
-        void BackTracking(vector<int>& candidates, int sum, int index) {
-            if (sum == 0) {
+        void BackTracking(vector<int>& candidates, int sum, int index)
+        {
+            if (sum == 0)
+            {
                 res.push_back(comb);
                 return;
             }
             else if (sum < 0) return;
 
-            for (int i = index; i < Length; ++i) {
+            for (int i = index; i < Length; ++i)
+            {
                 int tmp = candidates[i];
                 if (tmp > sum) break;
 

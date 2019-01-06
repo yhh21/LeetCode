@@ -2,7 +2,8 @@
 
 #include "../Head.h"
 
-namespace L0036 {
+namespace L0036
+{
 #define vb vector<bool>
 #define vvb vector<vb>
 #define vvvb vector<vvb>
@@ -12,17 +13,22 @@ namespace L0036 {
     class Solution
     {
     public:
-        bool isValidSudoku(vector<vector<char>>& board) {
+        bool isValidSudoku(vector<vector<char>>& board)
+        {
             vvb col = vvb(N, vb(10, false));
             vvb row = vvb(N, vb(10, false));
             vvvb rec = vvvb(N / 3, vvb(N / 3, vb(10, false)));
 
-            for (int i = 0; i < N; ++i) {
-                for (int j = 0; j < N; ++j) {
+            for (int i = 0; i < N; ++i)
+            {
+                for (int j = 0; j < N; ++j)
+                {
                     char c = board[i][j];
-                    if (c != '.') {
+                    if (c != '.')
+                    {
                         int tmp = (int)(c - '0');
-                        if (!col[i][tmp] && !row[j][tmp] && !rec[i / 3][j / 3][tmp]) {
+                        if (!col[i][tmp] && !row[j][tmp] && !rec[i / 3][j / 3][tmp])
+                        {
                             col[i][tmp] = row[j][tmp] = rec[i / 3][j / 3][tmp] = true;
                         }
                         else return false;

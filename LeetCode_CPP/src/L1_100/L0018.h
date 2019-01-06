@@ -2,25 +2,31 @@
 
 #include "../Head.h"
 
-namespace L0018 {
+namespace L0018
+{
     class Solution
     {
     public:
-        vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        vector<vector<int>> fourSum(vector<int>& nums, int target)
+        {
             sort(nums.begin(), nums.end());
 
             vector<vector<int>> res;
             vector<int> *tmp;
             const int Length = nums.size();
 
-            for (int i = 0; i < Length - 3;) {
-                for (int j = i + 1; j < Length - 2;) {
+            for (int i = 0; i < Length - 3;)
+            {
+                for (int j = i + 1; j < Length - 2;)
+                {
                     int headSum = nums[i] + nums[j];
                     if (nums[j] >= 0 && headSum > target) break;
 
-                    for (int k = j + 1, l = Length - 1; k < l;) {
+                    for (int k = j + 1, l = Length - 1; k < l;)
+                    {
                         int sum = headSum + nums[k] + nums[l];
-                        if (sum == target) {
+                        if (sum == target)
+                        {
                             tmp = new vector<int>();
                             tmp->push_back(nums[i]);
                             tmp->push_back(nums[j]);
@@ -29,11 +35,13 @@ namespace L0018 {
                             res.push_back(*tmp);
                         }
 
-                        if (sum <= target) {
+                        if (sum <= target)
+                        {
                             for (++k; k < l && nums[k - 1] == nums[k]; ++k);
                         }
 
-                        if (sum >= target) {
+                        if (sum >= target)
+                        {
                             for (--l; k < l && nums[l] == nums[l + 1]; --l);
                         }
                     }

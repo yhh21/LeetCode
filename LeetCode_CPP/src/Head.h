@@ -8,13 +8,15 @@
 #include <map>
 using namespace std;
 
-struct ListNode {
+struct ListNode
+{
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(nullptr) {}
 };
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -22,20 +24,26 @@ struct TreeNode {
 };
 
 template<typename T> inline
+void Print(const T &val)
+{
+    cout << val;
+}
+
+template<typename T> inline
 void Print(const vector<T> &nums)
 {
     const int Length = nums.size();
-    cout << "[";
+    Print("[");
     for (int i = 0; i < Length; ++i)
     {
-        cout << nums[i];
+        Print(nums[i]);
 
         if (Length - 1 != i)
         {
-            cout << ", ";
+            Print(", ");
         }
     }
-    cout << "]\n";
+    Print("]\n");
 }
 
 template<typename T> inline
@@ -46,16 +54,16 @@ void Print(const vector<vector<T>> &mm)
     {
         const int tmp_Length = mm[i].size();
 
-        cout << "[";
+        Print("[");
         for (int j = 0; j < tmp_Length; ++j)
         {
-            cout << mm[i][j];
+            Print(mm[i][j]);
 
             if (tmp_Length - 1 != j)
             {
-                cout << ", ";
+                Print(", ");
             }
         }
-        cout << "]\n";
+        Print("]\n");
     }
 }

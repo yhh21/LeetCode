@@ -1,7 +1,12 @@
-#include "L1_100/L0048.h"
+#ifdef DEBUG
+#include "L1_100/L0050.h"
+#endif /// DEBUG
 
-int main() {
-    (new L0048::Solution)->Test();
+int main()
+{
+#ifdef DEBUG
+    (new L0050::Solution)->Test();
+#endif /// DEBUG
 
     return 0;
 }

@@ -2,21 +2,26 @@
 
 #include "../Head.h"
 
-namespace L0015 {
+namespace L0015
+{
     class Solution
     {
     public:
-        vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> threeSum(vector<int>& nums)
+        {
             sort(nums.begin(), nums.end());
 
             vector<vector<int>> res;
             vector<int> *tmp;
             const int Length = nums.size();
 
-            for (int i = 0; i < Length - 2 && nums[i] <= 0;) {
-                for (int j = i + 1, k = Length - 1; j < k;) {
+            for (int i = 0; i < Length - 2 && nums[i] <= 0;)
+            {
+                for (int j = i + 1, k = Length - 1; j < k;)
+                {
                     int sum = nums[i] + nums[j] + nums[k];
-                    if (sum == 0) {
+                    if (sum == 0)
+                    {
                         tmp = new vector<int>();
                         tmp->push_back(nums[i]);
                         tmp->push_back(nums[j]);
@@ -24,11 +29,13 @@ namespace L0015 {
                         res.push_back(*tmp);
                     }
 
-                    if (sum <= 0) {
+                    if (sum <= 0)
+                    {
                         for (++j; j < k && nums[j - 1] == nums[j]; ++j);
                     }
 
-                    if (sum >= 0) {
+                    if (sum >= 0)
+                    {
                         for (--k; j < k && nums[k] == nums[k + 1]; --k);
                     }
                 }
