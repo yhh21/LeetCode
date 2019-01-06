@@ -10,7 +10,11 @@ namespace L0050
     public:
         double myPow(double x, int n)
         {
-            if (n < 0) return myPow(1.0 / x, -n);
+            if (n < 0)
+            {
+                double inv_x = 1.0 / x;
+                return inv_x * myPow(inv_x, -(n + 1));
+            }
             else if (0 == n) return 1.0;
             else
             {
