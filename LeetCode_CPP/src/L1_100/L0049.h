@@ -13,12 +13,10 @@ namespace L0049
             const int Length = strs.size();
 
             vector<vector<int>> alpha_numbers;
-            alpha_numbers.reserve(Length);
 
             for (int i = 0; i < Length; ++i)
             {
-                vector<int> tmp_num;
-                tmp_num.resize(26);
+                vector<int> tmp_num(26, 0);
 
                 string tmp = strs[i];
                 int tmp_Length = tmp.size();

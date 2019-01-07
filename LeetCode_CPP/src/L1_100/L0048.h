@@ -40,10 +40,9 @@ namespace L0048
         {
             vector<vector<int>> test;
             static const int N = 4;
-            test.resize(N);
             for (int i = 0; i < N; ++i)
             {
-                test[i].resize(N);
+                test.push_back(vector<int>(N, 0));
                 for (int j = 0; j < N; ++j)
                 {
                     test[i][j] = (i * N + j + 1);

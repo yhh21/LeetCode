@@ -16,10 +16,9 @@ namespace L0044
             if (0 == p_Length) return 0 == s_Length;
 
             vector<vector<bool>> dp;
-            dp.resize(s_Length + 1);
             for (int i = 0; i <= s_Length; ++i)
             {
-                dp[i].resize(p_Length + 1);
+                dp.push_back(vector<bool>(p_Length + 1, false));
             }
 
             dp[0][0] = true;
@@ -56,7 +55,7 @@ namespace L0044
     #ifdef DEBUG
         void Test()
         {
-            isMatch("aa", "*");
+            Print(isMatch("aa", "*"));
         }
     #endif /// DEBUG
     };
