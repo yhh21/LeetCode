@@ -4,7 +4,7 @@
 
 namespace L0056
 {
-    /// https ://leetcode.com/problems/merge-intervals/
+    /// https://leetcode.com/problems/merge-intervals/
     class Solution
     {
     public:
