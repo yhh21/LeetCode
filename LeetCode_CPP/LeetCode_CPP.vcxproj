@@ -195,6 +195,8 @@
     <ClInclude Include="src\L1_100\L0060.h" />
     <ClInclude Include="src\L1_100\L0061.h" />
     <ClInclude Include="src\L1_100\L0062.h" />
+    <ClInclude Include="src\L1_100\L0063.h" />
+    <ClInclude Include="src\L1_100\L0064.h" />
     <ClInclude Include="src\L1_100\L0066.h" />
     <ClInclude Include="src\L1_100\L0067.h" />
     <ClInclude Include="src\L1_100\L0069.h" />
