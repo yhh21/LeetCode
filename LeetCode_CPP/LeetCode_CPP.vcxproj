@@ -205,6 +205,8 @@
     <ClInclude Include="src\L101_200\L0172.h" />
     <ClInclude Include="src\L101_200\L0189.h" />
     <ClInclude Include="src\L1_100\L0054.h" />
+    <ClInclude Include="src\L1_100\L0072.h" />
+    <ClInclude Include="src\L1_100\L0073.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
