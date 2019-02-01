@@ -34,13 +34,35 @@ struct Interval
 };
 
 
+ListNode* Vector2ListNode(const vector<int> &nums)
+{
+    const int Length = nums.size();
+
+    ListNode *p_head = nullptr;
+    if (0 < Length)
+    {
+        p_head = new ListNode(nums[0]);
+        ListNode *p = p_head;
+
+        for (int i = 1; i < Length; ++i)
+        {
+            ListNode *pp = new ListNode(nums[i]);
+            p->next = pp;
+            p = p->next;
+        }
+    }
+
+    return p_head;
+}
+
+
 template<typename T> inline
 void Print(const T &val)
 {
     cout << val;
 }
 
-template<typename T> inline
+template<typename T>
 void Print(const vector<T> &nums)
 {
     const int Length = nums.size();
@@ -57,7 +79,7 @@ void Print(const vector<T> &nums)
     Print("]\n");
 }
 
-template<typename T> inline
+template<typename T>
 void Print(const vector<vector<T>> &mm)
 {
     const int Length = mm.size();
@@ -77,4 +99,23 @@ void Print(const vector<vector<T>> &mm)
         }
         Print("]\n");
     }
+}
+
+
+void Print(ListNode *list)
+{
+    ListNode *p = list;
+    Print("[");
+    for (; nullptr != p;)
+    {
+        Print(p->val);
+
+        if (nullptr != p->next)
+        {
+            Print(", ");
+        }
+
+        p = p->next;
+    }
+    Print("]\n");
 }

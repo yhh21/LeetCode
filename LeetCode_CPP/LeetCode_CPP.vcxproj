@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Head.h" />
+    <ClInclude Include="src\L1_100\L0081.h" />
     <ClInclude Include="src\L1_100\L0012.h" />
     <ClInclude Include="src\L1_100\L0014.h" />
     <ClInclude Include="src\L1_100\L0015.h" />
@@ -213,6 +214,11 @@
     <ClInclude Include="src\L1_100\L0077.h" />
     <ClInclude Include="src\L1_100\L0078.h" />
     <ClInclude Include="src\L1_100\L0079.h" />
+    <ClInclude Include="src\L1_100\L0080.h" />
+    <ClInclude Include="src\L1_100\L0082.h" />
+    <ClInclude Include="src\L1_100\L0083.h" />
+    <ClInclude Include="src\L1_100\L0084.h" />
+    <ClInclude Include="src\L1_100\L0088.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
