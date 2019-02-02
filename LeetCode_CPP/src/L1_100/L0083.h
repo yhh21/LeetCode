@@ -1,20 +1,24 @@
+
 #pragma once
 
-#include <string>
-#include <vector>
-#include <math.h>
-#include "ListNode.h"
-using namespace std;
+#include "../Head.h"
 
-class Leetcode0083
+namespace L0083
+{
+
+
+class Solution
 {
 public:
-    static ListNode* deleteDuplicates(ListNode* head) {
+    static ListNode* deleteDuplicates(ListNode* head)
+    {
         if (head == nullptr) return head;
         ListNode* pre = head;
         ListNode* p = pre->next;
-        while (p != nullptr) {
-            if (pre->val == p->val) {
+        while (p != nullptr)
+        {
+            if (pre->val == p->val)
+            {
                 pre->next = p->next;
                 //delete p;
             }
@@ -27,3 +31,6 @@ public:
         return head;
     }
 };
+
+
+}
