@@ -231,6 +231,11 @@
     <ClInclude Include="src\L1_100\L0092.h" />
     <ClInclude Include="src\L1_100\L0093.h" />
     <ClInclude Include="src\L1_100\L0094.h" />
+    <ClInclude Include="src\L1_100\L0095.h" />
+    <ClInclude Include="src\L1_100\L0096.h" />
+    <ClInclude Include="src\L1_100\L0097.h" />
+    <ClInclude Include="src\L1_100\L0098.h" />
+    <ClInclude Include="src\L1_100\L0099.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
