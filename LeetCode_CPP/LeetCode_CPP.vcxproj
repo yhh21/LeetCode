@@ -146,6 +146,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Head.h" />
+    <ClInclude Include="src\L101_200\L0102.h" />
+    <ClInclude Include="src\L101_200\L0103.h" />
+    <ClInclude Include="src\L101_200\L0105.h" />
+    <ClInclude Include="src\L101_200\L0106.h" />
+    <ClInclude Include="src\L101_200\L0109.h" />
     <ClInclude Include="src\L1_100\L0065.h" />
     <ClInclude Include="src\L1_100\L0068.h" />
     <ClInclude Include="src\L1_100\L0071.h" />
