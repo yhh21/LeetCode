@@ -120,3 +120,31 @@ void Print(ListNode *list)
     }
     Print("]\n");
 }
+
+
+void RecursiveTree(TreeNode* root, vector<vector<int>> &ret, const int &deep = 0)
+{
+    if (nullptr == root)
+    {
+        return;
+    }
+
+    if (deep == ret.size())
+    {
+        vector<int> tmp;
+        ret.push_back(tmp);
+    }
+
+    ret[deep].push_back(root->val);
+
+    RecursiveTree(root->left, ret, deep + 1);
+    RecursiveTree(root->right, ret, deep + 1);
+}
+
+void Print(TreeNode *tree)
+{
+    vector<vector<int>> ret;
+    RecursiveTree(tree, ret);
+
+    Print(ret);
+}
