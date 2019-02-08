@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <queue>
 #include <cmath>
 #include <algorithm>
 #include <map>
@@ -22,6 +23,14 @@ struct TreeNode
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+struct TreeLinkNode
+{
+    int val;
+    TreeLinkNode *left, *right, *next;
+    TreeLinkNode(int x) : val(x), left(nullptr), right(nullptr), next(nullptr)
+    {}
 };
 
 struct Interval
@@ -56,6 +65,46 @@ ListNode* Vector2ListNode(const vector<int> &nums)
     return p_head;
 }
 
+TreeNode* Vector2TreeNode(const vector<int> &nums)
+{
+    const int Length = nums.size();
+
+    TreeNode *p_head = nullptr;
+    if (0 < Length)
+    {
+        p_head = new TreeNode(nums[0]);
+        TreeNode *p = p_head;
+
+        queue<TreeNode *> _queue;
+        _queue.push(p);
+
+        int index = 1;
+        while (!_queue.empty() && index < Length)
+        {
+            TreeNode *cur_node = _queue.front();
+            _queue.pop();
+
+            TreeNode *left_node = nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
+            ++index;
+            TreeNode *right_node = nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
+            ++index;
+
+            cur_node->left = left_node;
+            cur_node->right = right_node;
+
+            if (nullptr != left_node)
+            {
+                _queue.push(left_node);
+            }
+            if (nullptr != right_node)
+            {
+                _queue.push(right_node);
+            }
+        }
+    }
+
+    return p_head;
+}
 
 template<typename T> inline
 void Print(const T &val)
