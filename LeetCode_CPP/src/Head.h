@@ -45,6 +45,13 @@ struct Interval
     {}
 };
 
+struct UndirectedGraphNode
+{
+    int label;
+    vector<UndirectedGraphNode *> neighbors;
+    UndirectedGraphNode(int x) : label(x)
+    {};
+};
 
 ListNode* Vector2ListNode(const vector<int> &nums)
 {

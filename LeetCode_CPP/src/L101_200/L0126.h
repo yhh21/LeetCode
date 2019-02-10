@@ -13,90 +13,131 @@ class Solution
 public:
     vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList)
     {
-        std::unordered_set<string> _hash_set;
-        for (auto str : wordList)
+        unordered_set<string> hash_set;
+        for (string str : wordList)
         {
-            _hash_set.insert(str);
+            hash_set.insert(str);
         }
+        hash_set.insert(beginWord);
 
         vector<vector<string>> ret;
-        vector<string> tmp_vec;
+        unordered_map<string, vector<string>> nodeNeighbors;// Neighbors for every node
+        unordered_map<string, int> distance;// Distance of every node from the beginWord node
+        vector<string> solution;
 
-        int min_len = INT_MAX;
-        Recursive(beginWord, endWord, _hash_set, beginWord, tmp_vec, ret, min_len);
+        bfs(beginWord, endWord, hash_set, nodeNeighbors, distance);
+        dfs(beginWord, endWord, hash_set, nodeNeighbors, distance, solution, ret);
+        return ret;
+    }
 
-        for (int i = ret.size() - 1; i >= 0; --i)
+    // BFS: Trace every node's distance from the beginWord node (level by level).
+    void bfs(string &beginWord, string &endWord, unordered_set<string> &hash_set,
+        unordered_map<string, vector<string>> &nodeNeighbors, unordered_map<string, int> &distance)
+    {
+        for (string str : hash_set)
         {
-            if (ret[i].size() > min_len)
+            vector<string> tmp;
+            nodeNeighbors.insert(pair<string, vector<string>>(str, tmp));
+        }
+
+        std::queue<string> queue;
+        queue.push(beginWord);
+        distance.insert(pair<string, int>(beginWord, 0));
+
+        bool is_find = false;
+        while (!queue.empty())
+        {
+            const int Length = queue.size();
+            for (int i = 0; i < Length; i++)
             {
-                ret.erase(ret.begin() + i);
+                string cur = queue.front();
+                queue.pop();
+                const int curDistance = distance.find(cur)->second;
+                vector<string> neighbors = getNeighbors(cur, hash_set);
+
+                auto &neighbors_vec = nodeNeighbors.find(cur)->second;
+                for (string neighbor : neighbors)
+                {
+                    neighbors_vec.push_back(neighbor);
+                    if (distance.find(neighbor) == distance.end())
+                    {
+                        // Check if visited
+                        distance.insert(pair<string, int>(neighbor, curDistance + 1));
+
+                        if (endWord == neighbor)// Found the shortest path
+                        {
+                            is_find = true;
+                        }
+                        else
+                        {
+                            queue.push(neighbor);
+                        }
+                    }
+                }
+            }
+
+            if (is_find)
+            {
+                break;
+            }
+        }
+    }
+
+    // Find all next level nodes.
+    vector<string> getNeighbors(string &node, unordered_set<string> &hash_set)
+    {
+        vector<string> ret;
+        const int Length = node.size();
+        for (char ch = 'a'; ch <= 'z'; ++ch)
+        {
+            for (int i = 0; i < Length; ++i)
+            {
+                if (node[i] == ch)
+                {
+                    continue;
+                }
+                char old_ch = node[i];
+                node[i] = ch;
+                if (hash_set.find(node) != hash_set.end())
+                {
+                    ret.push_back(node);
+                }
+                node[i] = old_ch;
             }
         }
 
         return ret;
     }
 
-    void Recursive(const string &beginWord, const string &endWord, const std::unordered_set<string> &_hash_set
-        , string tmp_str, vector<string> &tmp_vec, vector<vector<string>> &ret
-        , int &min_len)
+    // DFS: output all paths with the shortest distance.
+    void dfs(string &cur, string &endWord, unordered_set<string> &hash_set,
+        unordered_map<string, vector<string>> &nodeNeighbors, unordered_map<string, int> &distance,
+        vector<string> &solution, vector<vector<string>> &ret)
     {
-        static int Length = tmp_str.size();
-
-        if (tmp_vec.size() > min_len - 2)
+        solution.push_back(cur);
+        if (endWord == cur)
         {
-            return;
+            ret.push_back(solution);
         }
-
-        for (int i = 0; i < Length; ++i)
+        else
         {
-            char tmp_char = tmp_str[i];
-            for (int j = 'a'; j <= 'z'; ++j)
+            const int next_distance = distance.find(cur)->second + 1;
+            for (string next : nodeNeighbors.find(cur)->second)
             {
-                tmp_str[i] = j;
-                if (beginWord != tmp_str && _hash_set.find(tmp_str) != _hash_set.end())
+                if (next_distance == distance.find(next)->second)
                 {
-                    if (endWord == tmp_str)
-                    {
-                        vector<string> _tmp_vec;
-
-                        _tmp_vec.insert(_tmp_vec.begin(), beginWord);
-                        _tmp_vec.insert(_tmp_vec.end(), tmp_vec.begin(), tmp_vec.end());
-                        _tmp_vec.push_back(endWord);
-
-                        min_len = _tmp_vec.size();
-                        ret.push_back(_tmp_vec);
-                        return;
-                    }
-                    else if (!IsInVector(tmp_vec, tmp_str))
-                    {
-                        tmp_vec.push_back(tmp_str);
-                        Recursive(beginWord, endWord, _hash_set, tmp_str, tmp_vec, ret, min_len);
-                        tmp_vec.pop_back();
-                    }
+                    dfs(next, endWord, hash_set, nodeNeighbors, distance, solution, ret);
                 }
             }
-            tmp_str[i] = tmp_char;
         }
-    }
-
-    bool IsInVector(const vector<string> &ret, const string &str)
-    {
-        for (auto _str : ret)
-        {
-            if (_str == str)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        solution.pop_back();
     }
 
 #ifdef DEBUG
     void Test()
     {
-        vector<string> test = {"most", "mist", "miss", "lost", "fist", "fish"};
-        Print(findLadders("lost", "miss", test));
+        vector<string> test = {"hot", "dot", "dog", "lot", "log", "cog"};
+        Print(findLadders("hit", "cog", test));
     }
 #endif /// DEBUG
 };

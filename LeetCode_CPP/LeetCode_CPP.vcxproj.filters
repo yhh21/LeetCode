@@ -343,5 +343,23 @@
     <ClInclude Include="src\L101_200\L0129.h">
       <Filter>头文件\L101_200</Filter>
     </ClInclude>
+    <ClInclude Include="src\L101_200\L0127.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L101_200\L0130.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L101_200\L0131.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L101_200\L0132.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L101_200\L0133.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L101_200\L0134.h">
+      <Filter>头文件\L101_200</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
