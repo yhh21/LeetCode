@@ -35,6 +35,14 @@ struct TreeLinkNode
     {}
 };
 
+struct RandomListNode
+{
+    int label;
+    RandomListNode *next, *random;
+    RandomListNode(int x) : label(x), next(NULL), random(NULL)
+    {}
+};
+
 struct Interval
 {
     int start;
