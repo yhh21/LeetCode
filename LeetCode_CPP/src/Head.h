@@ -96,14 +96,14 @@ TreeNode* Vector2TreeNode(const vector<int> &nums)
         _queue.push(p);
 
         int index = 1;
-        while (!_queue.empty() && index < Length)
+        while (!_queue.empty())
         {
             TreeNode *cur_node = _queue.front();
             _queue.pop();
 
-            TreeNode *left_node = nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
+            TreeNode *left_node = index < Length && nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
             ++index;
-            TreeNode *right_node = nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
+            TreeNode *right_node = index < Length && nums[index] != -1 ? new TreeNode(nums[index]) : nullptr;
             ++index;
 
             cur_node->left = left_node;
