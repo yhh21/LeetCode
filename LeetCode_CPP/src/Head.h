@@ -10,6 +10,7 @@
 #include <map>
 #include <unordered_map>
 #include <unordered_set>
+#include <functional>
 using namespace std;
 
 struct ListNode
@@ -60,6 +61,17 @@ struct UndirectedGraphNode
     UndirectedGraphNode(int x) : label(x)
     {};
 };
+
+struct Point
+{
+    int x;
+    int y;
+    Point() : x(0), y(0)
+    {}
+    Point(int a, int b) : x(a), y(b)
+    {}
+};
+
 
 ListNode* Vector2ListNode(const vector<int> &nums)
 {
