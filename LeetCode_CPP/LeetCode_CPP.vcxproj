@@ -190,7 +190,12 @@
     <ClInclude Include="src\L101_200\L0149.h" />
     <ClInclude Include="src\L101_200\L0150.h" />
     <ClInclude Include="src\L101_200\L0151.h" />
+    <ClInclude Include="src\L101_200\L0152.h" />
+    <ClInclude Include="src\L101_200\L0153.h" />
+    <ClInclude Include="src\L101_200\L0154.h" />
     <ClInclude Include="src\L101_200\L0155.h" />
+    <ClInclude Include="src\L101_200\L0162.h" />
+    <ClInclude Include="src\L101_200\L0164.h" />
     <ClInclude Include="src\L1_100\L0065.h" />
     <ClInclude Include="src\L1_100\L0068.h" />
     <ClInclude Include="src\L1_100\L0071.h" />
