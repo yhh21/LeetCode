@@ -307,7 +307,17 @@
     <ClInclude Include="src\L201_300\L0210.h" />
     <ClInclude Include="src\L201_300\L0212.h" />
     <ClInclude Include="src\L201_300\L0215.h" />
+    <ClInclude Include="src\L201_300\L0218.h" />
+    <ClInclude Include="src\L201_300\L0227.h" />
+    <ClInclude Include="src\L201_300\L0230.h" />
+    <ClInclude Include="src\L201_300\L0234.h" />
     <ClInclude Include="src\L201_300\L0236.h" />
+    <ClInclude Include="src\L201_300\L0238.h" />
+    <ClInclude Include="src\L201_300\L0239.h" />
+    <ClInclude Include="src\L201_300\L0240.h" />
+    <ClInclude Include="src\L201_300\L0279.h" />
+    <ClInclude Include="src\L201_300\L0287.h" />
+    <ClInclude Include="src\L201_300\L0289.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

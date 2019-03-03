@@ -8,6 +8,7 @@
 #include <cmath>
 #include <algorithm>
 #include <map>
+#include <set>
 #include <unordered_map>
 #include <unordered_set>
 #include <functional>
@@ -40,7 +41,7 @@ struct RandomListNode
 {
     int label;
     RandomListNode *next, *random;
-    RandomListNode(int x) : label(x), next(NULL), random(NULL)
+    RandomListNode(int x) : label(x), next(nullptr), random(nullptr)
     {}
 };
 

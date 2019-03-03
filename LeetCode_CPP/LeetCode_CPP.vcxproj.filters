@@ -514,5 +514,35 @@
     <ClInclude Include="src\L201_300\L0215.h">
       <Filter>头文件\L201_300</Filter>
     </ClInclude>
+    <ClInclude Include="src\L201_300\L0218.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0227.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0230.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0234.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0238.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0239.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0240.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0279.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0287.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0289.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
