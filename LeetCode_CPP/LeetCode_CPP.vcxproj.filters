@@ -18,6 +18,9 @@
     <Filter Include="头文件\L201_300">
       <UniqueIdentifier>{93d4cc33-5090-4288-a758-80695a35c27c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\L301_400">
+      <UniqueIdentifier>{452f676f-ba92-4ad5-893f-1a731dc29701}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -543,6 +546,21 @@
     </ClInclude>
     <ClInclude Include="src\L201_300\L0289.h">
       <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0295.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0297.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L201_300\L0300.h">
+      <Filter>头文件\L201_300</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0315.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0322.h">
+      <Filter>头文件\L301_400</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
