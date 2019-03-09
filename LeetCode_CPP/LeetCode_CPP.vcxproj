@@ -323,6 +323,9 @@
     <ClInclude Include="src\L201_300\L0300.h" />
     <ClInclude Include="src\L301_400\L0315.h" />
     <ClInclude Include="src\L301_400\L0322.h" />
+    <ClInclude Include="src\L301_400\L0324.h" />
+    <ClInclude Include="src\L301_400\L0328.h" />
+    <ClInclude Include="src\L301_400\L0329.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
