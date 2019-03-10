@@ -571,5 +571,20 @@
     <ClInclude Include="src\L301_400\L0329.h">
       <Filter>头文件\L301_400</Filter>
     </ClInclude>
+    <ClInclude Include="src\L301_400\L0334.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0341.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0347.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0378.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
+    <ClInclude Include="src\L301_400\L0380.h">
+      <Filter>头文件\L301_400</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
